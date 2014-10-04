@@ -1,0 +1,22 @@
+<h1> Input your Manufacturer </h1>
+
+ <% if @manufacturer.errors.any? %>
+    <p><%= "#{@manufacturer.errors.count} error(s) prevented your matchup from being saved:"%></p>
+    <ul>
+      <% @manufacturer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+<%= form_for @manufacturer do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required:true %></br>
+
+  <%= f.label :country %>
+  <%= f.text_field :country, required:true %></br>
+
+  <%= f.submit 'Submit'%>
+
+<%end%>
+<p><%=link_to "Go back", manufacturers_path%></p>

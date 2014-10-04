@@ -3,3 +3,6 @@
 <li><%= link_to car.manufacturer.name, car_path(car) %> - <%= car.year %> - <%= car.color %></li>
 <%end%>
 </ul>
+
+<p><%=link_to "Create a New Car", new_car_path %></p>
+<p><%= link_to "View All Manufacturers", manufacturers_path %></p>
