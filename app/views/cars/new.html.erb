@@ -1,6 +1,6 @@
 <h3> Register Your New Car </h3>
  <% if @car.errors.any? %>
-    <p><%= "#{@car.errors.count} prevented your matchup from being saved:"%></p>
+    <p><%= "#{@car.errors.count} error(s) prevented your matchup from being saved:"%></p>
     <ul>
       <% @car.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>

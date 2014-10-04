@@ -1,5 +1,5 @@
 <ul>
 <%@cars.each do |car| %>
-<li><%= car.manufacturer.name%> <%= car.year%></li>
+<li><%= link_to car.manufacturer.name, car_path(car) %> - <%= car.year %> - <%= car.color %></li>
 <%end%>
 </ul>
