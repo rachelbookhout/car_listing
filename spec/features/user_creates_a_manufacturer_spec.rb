@@ -12,7 +12,7 @@ feature "User Creates a Car", %{
     fill_in "Name", with: manufacturer.name
     fill_in "Country", with: manufacturer.country
     click_on "Submit"
-   expect(page).to have_content "This Manufacturer has been created successfully"
+    expect(page).to have_content "This Manufacturer has been created successfully"
   end
 
   scenario "User can't submit an empty form" do
@@ -30,5 +30,4 @@ feature "User Creates a Car", %{
     click_on "Submit"
     expect(page).to have_content "Name : We already know about this manufacturer. Please hit the back button to go look at it"
   end
-
 end

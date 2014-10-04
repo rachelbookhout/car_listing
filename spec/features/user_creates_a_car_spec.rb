@@ -33,8 +33,6 @@ feature "User Creates a Car", %{
     fill_in "Year", with: "1888"
     fill_in "Mileage", with: car.mileage
     click_on "Submit"
-   expect(page).to have_content "Year must be greater than 1920"
+    expect(page).to have_content "Year must be greater than 1920"
   end
-
-
 end
